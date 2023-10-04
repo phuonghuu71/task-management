@@ -1,0 +1,33 @@
+@keyframes scaleAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.scaleUp {
+  animation: scaleAnimation 0.5s ease forwards;
+}
+
+.scaleDown {
+  animation: scaleAnimation 0.5s ease backwards;
+}
+
+@keyframes translateYAnimation {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.moveUp {
+  animation: translateYAnimation 0.5s ease forwards;
+}
+
+.moveDown {
+  animation: translateYAnimation 0.5s ease backwards;
+}

@@ -1,0 +1,16 @@
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    @apply w-1;
+
+    &-thumb {
+      @apply bg-gray-400 rounded-xl;
+    }
+  }
+}
+
+.scrollbar {
+  overflow: overlay;
+  transition: 0.5s;
+
+  @include scrollbar;
+}

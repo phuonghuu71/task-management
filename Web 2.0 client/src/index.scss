@@ -1,0 +1,11 @@
+@use "./assets/components/scrollbar";
+@use "./assets/components/input";
+@use "./assets/components/date-picker";
+@use "./assets/components/dropdown";
+
+@use "./assets/utils/animations";
+@use "./assets/utils/loading";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

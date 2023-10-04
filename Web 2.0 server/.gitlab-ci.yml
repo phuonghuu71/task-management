@@ -1,0 +1,25 @@
+image: node:12.13.0-alpine
+
+before_script:
+  - npm install -g firebase-tools
+
+stages:
+  - deploy
+
+deploy_server:
+  stage: deploy
+  cache:
+    key: functioncs-cache
+    paths:
+      - node_modules/
+  script:
+    - cd functions
+    - npm install 
+    - cd ..
+    - firebase use dev
+    - firebase deploy --only functions --token $FIREBASE_TOKEN --non-interactive
+  only:
+    refs:
+      - server
+    changes:
+      - functions/**/*

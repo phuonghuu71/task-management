@@ -1,0 +1,77 @@
+@use "./scrollbar" as *;
+
+.date-picker {
+  @apply px-2 py-1 w-full border-2 border-gray-300 rounded-md focus:outline-none;
+}
+
+.calendar {
+  @apply border-0 drop-shadow-md rounded-lg;
+
+  animation: scaleAnimation 0.5s ease forwards;
+
+  .react-datepicker {
+    &__navigation {
+      @apply top-2;
+    }
+
+    &__header {
+      @apply bg-blue-500 border-none;
+
+      .react-datepicker-time__header {
+        @apply text-white;
+      }
+
+      .react-datepicker__current-month {
+        @apply text-white;
+      }
+
+      .react-datepicker__day-names {
+        .react-datepicker__day-name {
+          @apply text-white;
+        }
+      }
+    }
+
+    &__triangle {
+      &::before {
+        @apply border-none;
+      }
+    }
+
+    &__month {
+      &-container {
+        @apply border-r-2 border-blue-500;
+      }
+    }
+
+    &__day {
+      &--keyboard-selected {
+        @apply bg-blue-300;
+
+        &:hover {
+          @apply bg-blue-400;
+        }
+      }
+
+      &--selected {
+        @apply bg-blue-500;
+      }
+    }
+
+    &__time {
+      &-container {
+        @apply border-none;
+      }
+
+      &-list {
+        @include scrollbar;
+
+        &-item {
+          &--selected {
+            background-color:#3b82f6 !important;
+          }
+        }
+      }
+    }
+  }
+}

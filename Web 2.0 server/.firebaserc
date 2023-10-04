@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "dev": "task-management-1863b",
+    "default": "task-management-1863b"
+  },
+  "targets": {},
+  "etags": {}
+}
